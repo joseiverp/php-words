@@ -1,0 +1,185 @@
+/* Reset básico y tipografía */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f4f6f9;
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+/* Cabecera con fondo de color distintivo de PHP */
+.cabecera {
+  background: linear-gradient(135deg, #4f5d95 0%, #384470 100%);
+  color: #ffffff;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-cabecera {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#titulo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+}
+
+#subtitulo {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin-bottom: 0.75rem;
+}
+
+#version {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* Contenedor principal de la aplicación */
+.contenedor-principal {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Barra de controles en flexbox */
+#controles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  background-color: #ffffff;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+#controles input,
+#controles select {
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: #ffffff;
+  color: #334155;
+}
+
+#controles input {
+  flex: 1;
+  min-width: 200px;
+}
+
+#controles input:focus,
+#controles select:focus {
+  border-color: #4f5d95;
+  box-shadow: 0 0 0 3px rgba(79, 93, 149, 0.2);
+}
+
+#controles select {
+  cursor: pointer;
+  min-width: 180px;
+  text-transform: capitalize;
+}
+
+/* Contador de resultados */
+#contador {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 1.25rem;
+  padding-left: 0.25rem;
+}
+
+/* Cuadrícula de lista y tarjetas blancas */
+#lista {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 0.5rem;
+}
+
+.tarjeta-cabecera .palabra {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4f5d95;
+  background-color: #eef2ff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+
+.tarjeta-cabecera .categoria {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #475569;
+  background-color: #f1f5f9;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+}
+
+.tarjeta .descripcion {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 640px) {
+  #controles {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #titulo {
+    font-size: 2rem;
+  }
+
+  #lista {
+    grid-template-columns: 1fr;
+  }
+}
