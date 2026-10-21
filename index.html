@@ -16,9 +16,10 @@
   </header>
 
   <main class="contenedor-principal">
-    <div id="controles"></div>
-    <div id="contador"></div>
-    <ul id="lista"></ul>
+    <!-- Las etiquetas accesibles identifican los filtros, el estado y los resultados a tecnologías de asistencia. -->
+    <div id="controles" role="search" aria-label="Buscar y filtrar palabras"></div>
+    <div id="contador" role="status" aria-live="polite" aria-atomic="true"></div>
+    <ul id="lista" aria-label="Palabras de PHP"></ul>
   </main>
 
   <script src="js/config.js"></script>
