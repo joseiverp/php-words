@@ -20,3 +20,5 @@ Aplicación web estática para consultar y filtrar palabras reservadas de PHP de
      npx serve
      ```
    A continuación, accede a `http://localhost:8000` en tu navegador.
+   
+Cambios hecho con Github.
