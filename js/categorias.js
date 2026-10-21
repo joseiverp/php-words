@@ -13,6 +13,11 @@ PALABRAS.forEach(function (item) {
   }
 });
 
+// Ordena las opciones para que sea más rápido encontrar una categoría.
+categorias.sort(function (a, b) {
+  return a.localeCompare(b, "es");
+});
+
 categorias.forEach(function (cat) {
   const opcion = document.createElement("option");
   opcion.value = cat;

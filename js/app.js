@@ -22,13 +22,25 @@ function aplicarFiltros() {
   palabrasFiltradas.forEach(function (item) {
     const li = document.createElement("li");
     li.className = "tarjeta";
-    li.innerHTML = `
-      <div class="tarjeta-cabecera">
-        <code class="palabra">${item.palabra}</code>
-        <span class="categoria">${item.categoria}</span>
-      </div>
-      <p class="descripcion">${item.descripcion}</p>
-    `;
+
+    // textContent evita interpretar datos de las palabras como HTML ejecutable.
+    const cabecera = document.createElement("div");
+    cabecera.className = "tarjeta-cabecera";
+
+    const palabra = document.createElement("code");
+    palabra.className = "palabra";
+    palabra.textContent = item.palabra;
+
+    const categoria = document.createElement("span");
+    categoria.className = "categoria";
+    categoria.textContent = item.categoria;
+
+    const descripcion = document.createElement("p");
+    descripcion.className = "descripcion";
+    descripcion.textContent = item.descripcion;
+
+    cabecera.append(palabra, categoria);
+    li.append(cabecera, descripcion);
     lista.appendChild(li);
   });
 

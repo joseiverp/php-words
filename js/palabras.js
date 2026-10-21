@@ -39,5 +39,14 @@ const PALABRAS = [
   { palabra: "include", categoria: "otros", descripcion: "Incluye y evalúa el archivo especificado, emitiendo una advertencia si no existe." },
   { palabra: "require", categoria: "otros", descripcion: "Incluye y evalúa el archivo especificado, produciendo un error fatal si no existe." },
   { palabra: "namespace", categoria: "otros", descripcion: "Declara un espacio de nombres para organizar y evitar colisiones de identificadores." },
-  { palabra: "use", categoria: "otros", descripcion: "Permite importar espacios de nombres, clases o traits al ámbito actual." }
+  { palabra: "use", categoria: "otros", descripcion: "Permite importar espacios de nombres, clases o traits al ámbito actual." },
+  // Se amplía el glosario con construcciones habituales de PHP que faltaban.
+  { palabra: "isset", categoria: "otros", descripcion: "Comprueba si una variable está definida y tiene un valor distinto de null." },
+  { palabra: "empty", categoria: "otros", descripcion: "Comprueba si una variable no existe o contiene un valor considerado vacío." },
+  { palabra: "unset", categoria: "otros", descripcion: "Destruye las variables especificadas o elimina elementos de una matriz." },
+  { palabra: "global", categoria: "otros", descripcion: "Permite acceder dentro de una función a una variable definida en el ámbito global." },
+  { palabra: "const", categoria: "otros", descripcion: "Declara una constante cuyo valor no puede cambiar durante la ejecución." },
+  { palabra: "declare", categoria: "otros", descripcion: "Establece directivas de ejecución para un bloque o archivo de PHP." },
+  { palabra: "instanceof", categoria: "clases", descripcion: "Comprueba si un objeto pertenece a una clase o implementa una interfaz." },
+  { palabra: "clone", categoria: "clases", descripcion: "Crea una copia de un objeto existente." }
 ];
